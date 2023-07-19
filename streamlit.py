@@ -379,7 +379,7 @@ if uploaded_file is not None:
         if(mod=="OpenAI"):
             embeddings = OpenAIEmbeddings()
         if(mod=="Cohere"):
-            embeddings = CohereEmbeddings()
+            embeddings = CohereEmbeddings(cohere_api_key=api_key)
         store = Chroma.from_documents(docs,embeddings)
         vectorstore_info = VectorStoreInfo(
             name="starbucks",
