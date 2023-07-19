@@ -436,6 +436,7 @@ if (st.button("Submit")):
             st.download_button("Download PDF", f.read(), file_name="output.pdf", mime="application/pdf")
     else:
         try:
+            st.write("Question asked by the user is " + selected_ques)
             response = agent.run(f"As a financial data analyst, your task is to thoroughly analyze \
             the annual financial report of a company and provide accurate answers based solely on the data presented \
             in the document. It is important to strictly adhere to the information provided in the report and \
