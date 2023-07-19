@@ -408,6 +408,8 @@ ans=[]
 if (st.button("Submit")):
     output_res=[]
 
+    st.write("Company Name: " + company_name)
+
     # llm = OpenAI(temperature=0.3)
     tools = load_tools(["serpapi", "llm-math"], llm=llm)
     agent = initialize_agent(llm = llm,
@@ -415,7 +417,6 @@ if (st.button("Submit")):
                     agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
                     tools = tools,
                     verbose=True)
-    st.write("Company Name:" + company_name)
     if(mod=='OpenAI'):
         ans = financial_analyst(company_name)
         st.write("Question asked by the user is " + selected_ques)
