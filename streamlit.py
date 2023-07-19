@@ -1,6 +1,4 @@
 import streamlit as st
-# from apiKey import apikey
-#from apiKey import serpapi
 import os
 from langchain.agents import load_tools
 from langchain.agents import initialize_agent
@@ -51,11 +49,6 @@ from langchain.vectorstores import Chroma
 from langchain.embeddings.openai import OpenAIEmbeddings
 
 st.header('FinAI')
-
-# openAIKey = st.text_input("Enter your OpenAI Key")
-# serpAPIKey = st.text_input("Enter your serpAPI Key")
-# os.environ["OPENAI_API_KEY"] = "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"
-# os.environ["SERPAPI_API_KEY"] = "78fd10d8446eb27f8289528354259670c5266a76eb7864a25249de160d58e0c7"
 
 mod = None
 
