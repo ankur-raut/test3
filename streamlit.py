@@ -9,8 +9,6 @@ import requests
 import json
 import yfinance as yf
 from yahooquery import Ticker
-import os
-from reportlab.pdfgen import canvas
 from langchain.llms import OpenAI
 from langchain.document_loaders import PyPDFLoader
 from langchain.vectorstores import Chroma
@@ -25,8 +23,6 @@ from langchain.document_loaders import TextLoader, DirectoryLoader
 from langchain.document_loaders import DirectoryLoader
 from langchain.embeddings import CohereEmbeddings
 from langchain.vectorstores import Chroma
-from langchain.document_loaders import PyPDFLoader
-import os
 from langchain.llms import Cohere
 from langchain.evaluation.loading import load_dataset
 from langchain.indexes import VectorstoreIndexCreator
